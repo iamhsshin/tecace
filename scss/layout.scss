@@ -1,0 +1,116 @@
+@import 'config';
+
+#wrap {
+    overflow: hidden;
+    position: relative;
+}
+#main-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    height: 80px;
+    background-color: #020A27;
+    h1 {
+        position: relative;
+        width: 127px;
+        height: 24px;
+        margin-right: 80px;
+        background: url('../images/logo.png');
+        background-size: cover;
+        @include ir;
+    }
+    ul {
+        display: flex;
+        align-items: center;
+        li {
+            margin-right: 85px;
+            &:last-child {
+                margin-right: 0;
+            }
+            a {
+                color: #C2C1C0;
+                @include font-light;
+                font-size: 16px;
+            }
+            &.focus {
+                a {
+                    @include font-semi-bold;
+                    color: #4AC8F5;
+                }
+            }
+            &.depth {
+                padding-right: 24px;
+                background: url('../images/bu-gnb-dropdown.png') 100% 12px no-repeat;
+            }
+        }
+    }
+}
+#contents {
+    position: relative;
+}
+footer {
+    display: flex;
+    justify-content: center;
+    padding: 130px 0 120px;
+    color: #fff;
+    background-color: #020A27;
+    a {
+        color: #fff;
+    }
+    > dl {
+        margin-right: 85px;
+        &:last-child {
+            margin-right: 0;
+        }
+        dt {
+            margin-bottom: 12px;
+            @include font-semi-bold;
+            color: #4AC8F5;
+        }
+        dd {
+            margin-bottom: 20px;
+            @include font-medium;
+            font-size: 14px;
+            &:last-child {
+                margin-bottom: 0;
+            }
+            em {
+                @include font-bold;
+            }
+        }
+    }
+    .footer-contact {
+        position: relative;
+        margin-left: 120px;
+        text-align: right;
+        dl {
+            margin-top: 50px;
+        }
+        dt {
+            margin-bottom: 8px;
+            @include font-semi-bold;
+            color: #4AC8F5;
+        }
+        dd {
+            margin-bottom: 10px;
+            font-size: 16px;
+            @include font-medium;
+            &:last-child {
+                margin-top: 40px;
+                font-size: 13px;
+                @include font-light;
+            }
+        }
+    }
+}
+.position-top {
+    position: absolute;
+    bottom: 80px;
+    right: 50%;
+    width: 70px;
+    height: 83px;
+    margin-right: -650px;
+    @include ir;
+    background-image: url('../images/btn_top.png');
+}
