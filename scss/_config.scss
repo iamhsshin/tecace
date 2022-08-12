@@ -1,5 +1,5 @@
 $color-text-default: #000000;
-$color-text-highlight: #4AC8F5;
+$color-text-highlight: #4ac8f5;
 
 @mixin font-light {
     font-family: Poppins-Light, serif;
@@ -36,6 +36,7 @@ $color-text-highlight: #4AC8F5;
         -webkit-box-orient: vertical;
     }
 }
+
 .lazy {
     opacity: 0;
     transform: translateY(50px);
@@ -44,4 +45,13 @@ $color-text-highlight: #4AC8F5;
     opacity: 1;
     transform: translateY(0);
     transition: all 0.5s ease-in-out;
+}
+
+.hover-eff {
+    transition: transform 0.5s ease-in-out;
+}
+a:hover {
+    img.hover-eff {
+        transform: scale(1.1);
+    }
 }

@@ -7,6 +7,12 @@
   transform: translateY(0);
   transition: all 0.5s ease-in-out; }
 
+.hover-eff {
+  transition: transform 0.5s ease-in-out; }
+
+a:hover img.hover-eff {
+  transform: scale(1.1); }
+
 @font-face {
   font-family: Poppins-Light;
   src: url("../font/Poppins-Light.woff");
@@ -162,6 +168,12 @@ legend {
   transform: translateY(0);
   transition: all 0.5s ease-in-out; }
 
+.hover-eff {
+  transition: transform 0.5s ease-in-out; }
+
+a:hover img.hover-eff {
+  transform: scale(1.1); }
+
 #wrap {
   overflow: hidden;
   position: relative; }
@@ -265,6 +277,12 @@ footer {
   opacity: 1;
   transform: translateY(0);
   transition: all 0.5s ease-in-out; }
+
+.hover-eff {
+  transition: transform 0.5s ease-in-out; }
+
+a:hover img.hover-eff {
+  transform: scale(1.1); }
 
 .banner-home {
   position: relative;
@@ -370,17 +388,20 @@ footer {
     font-size: 16px; }
 
 .home-work {
-  overflow: hidden;
   position: relative;
   background-color: #212a50; }
   .home-work-inner {
+    overflow: hidden;
     position: relative;
     width: 1200px;
     height: 675px;
     padding-top: 120px;
     margin: 0 auto; }
     .home-work-inner > div {
-      display: flex; }
+      display: flex;
+      position: relative;
+      width: 1164px;
+      transform: translateX(0); }
   .home-work .banner-swipe {
     position: absolute;
     top: 50px;
@@ -397,14 +418,16 @@ footer {
       transform: rotate(180deg); }
   .home-work dl {
     position: relative;
-    width: 340px;
+    width: 338px;
     margin-right: 75px;
     color: #fff; }
   .home-work dt {
     margin-bottom: 12px;
     font-family: Poppins-SemiBold, serif; }
-    .home-work dt img {
-      display: block;
+    .home-work dt .home-work-thumb {
+      overflow: hidden;
+      width: 338px;
+      height: 412px;
       margin-bottom: 12px; }
   .home-work dd {
     font-size: 14px; }
@@ -472,11 +495,13 @@ footer {
     margin-right: 30px; }
     .home-news li:last-child {
       margin-right: 0; }
+    .home-news li .home-news-thumb {
+      overflow: hidden;
+      width: 370px;
+      height: 212px;
+      margin-bottom: 32px; }
     .home-news li article {
       padding: 0 30px; }
-    .home-news li img {
-      display: block;
-      margin-bottom: 32px; }
     .home-news li h4 {
       margin-bottom: 20px;
       font-size: 22px;
@@ -582,7 +607,7 @@ footer {
       height: 49px;
       font-size: 16px;
       font-family: Poppins-Bold, serif;
-      background-color: #4AC8F5;
+      background-color: #4ac8f5;
       box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25); }
   .home-contact-branches {
     display: flex;
@@ -596,7 +621,7 @@ footer {
       margin-top: 70px;
       font-size: 26px;
       font-family: Poppins-Bold, serif;
-      color: #4AC8F5; }
+      color: #4ac8f5; }
       .home-contact-branches h4:first-child {
         margin-top: 0; }
     .home-contact-branches dl {
@@ -608,26 +633,28 @@ footer {
     .home-contact-branches dd {
       font-size: 16px; }
 
-.banner-expertise {
-  position: relative;
-  background: #212B4F url("../images/banner_expertise.png") 50% 50% no-repeat; }
-  .banner-expertise > div {
+.banner-top {
+  position: relative; }
+  .banner-top > div {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     height: 678px;
     color: #fff; }
-  .banner-expertise h2 {
+  .banner-top h2 {
     margin-bottom: 30px;
     font-family: Poppins-Medium, serif;
     line-height: 48px;
     font-size: 48px; }
-  .banner-expertise p {
-    margin-bottom: 75px;
+  .banner-top p {
     font-family: Poppins-Light, serif;
     text-align: center;
     line-height: 36px; }
+  .banner-top.banner-expert {
+    background: #212B4F url("../images/banner_expertise.svg") 50% 50% no-repeat; }
+  .banner-top.banner-work {
+    background: #212B4F url("../images/banner_works.svg") 50% 50% no-repeat; }
 
 .expertise {
   position: relative;
@@ -665,13 +692,14 @@ footer {
     .detail-service dl:last-child {
       margin-bottom: 0; }
     .detail-service dl:nth-child(1) {
-      background-image: url("../images/bg_service_device.png"); }
+      background-image: url("../images/bg_service_device.svg");
+      background-size: 880px 770px; }
     .detail-service dl:nth-child(2) {
-      background-image: url("../images/bg_service_cloud.png"); }
+      background-image: url("../images/bg_service_cloud.svg"); }
     .detail-service dl:nth-child(3) {
-      background-image: url("../images/bg_service_software.png"); }
+      background-image: url("../images/bg_service_software.svg"); }
     .detail-service dl:nth-child(4) {
-      background-image: url("../images/bg_service_meta.png"); }
+      background-image: url("../images/bg_service_meta.svg"); }
   .detail-service dt {
     margin-bottom: 50px;
     font-family: Poppins-SemiBold, serif;

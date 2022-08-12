@@ -126,46 +126,77 @@
 
                 <div class="home-work">
                     <div class="home-work-inner">
-                        <button class="banner-swipe left">left</button>
-                        <button class="banner-swipe right">right</button>
-                        <div class="lazy">
-                            <dl>
-                                <dt>
-                                    <img src="../images/tmp-home-work1.png" width="338" height="412" alt="" />
-                                    Retail Experience App
-                                </dt>
-                                <dd>Device optimization, Content Globalization, Retail environment</dd>
-                            </dl>
-                            <dl>
-                                <dt>
-                                    <img src="../images/tmp-home-work1.png" width="338" height="412" alt="" />
-                                    Retail Experience App
-                                </dt>
-                                <dd>Device optimization, Content Globalization, Retail environment</dd>
-                            </dl>
-                            <dl>
-                                <dt>
-                                    <img src="../images/tmp-home-work1.png" width="338" height="412" alt="" />
-                                    Retail Experience App
-                                </dt>
-                                <dd>Device optimization, Content Globalization, Retail environment</dd>
-                            </dl>
-                            <dl>
-                                <dt>
-                                    <img src="../images/tmp-home-work1.png" width="338" height="412" alt="" />
-                                    Retail Experience App
-                                </dt>
-                                <dd>Device optimization, Content Globalization, Retail environment</dd>
-                            </dl>
-                            <dl>
-                                <dt>
-                                    <img src="../images/tmp-home-work1.png" width="338" height="412" alt="" />
-                                    Retail Experience App
-                                </dt>
-                                <dd>Device optimization, Content Globalization, Retail environment</dd>
-                            </dl>
+                        <button class="banner-swipe left" onclick="swipe('prev')">left</button>
+                        <button class="banner-swipe right" onclick="swipe('next')">right</button>
+                        <div class="lazy" id="home_work_list">
+                            <a href="#">
+                                <dl>
+                                    <dt>
+                                        <div class="home-work-thumb"><img src="../images/home_work1.png" width="338" height="412" alt="" class="hover-eff" /></div>
+                                        Retail Experience App
+                                    </dt>
+                                    <dd>Device optimization, Content Globalization, Retail environment</dd>
+                                </dl>
+                            </a>
+                            <a href="#">
+                                <dl>
+                                    <dt>
+                                        <div class="home-work-thumb"><img src="../images/home_work2.png" width="338" height="412" alt="" class="hover-eff" /></div>
+                                        Ring for Watch
+                                    </dt>
+                                    <dd>Access your Smart Video Doorbells and Security Cameras</dd>
+                                </dl>
+                            </a>
+                            <a href="#">
+                                <dl>
+                                    <dt>
+                                        <div class="home-work-thumb"><img src="../images/home_work3.png" width="338" height="412" alt="" class="hover-eff" /></div>
+                                        Strava
+                                    </dt>
+                                    <dd>Health activity app on Galaxy Watch</dd>
+                                </dl>
+                            </a>
+                            <a href="#">
+                                <dl>
+                                    <dt>
+                                        <div class="home-work-thumb"><img src="../images/home_work4.png" width="338" height="412" alt="" class="hover-eff" /></div>
+                                        Developer Portal DevOps
+                                    </dt>
+                                    <dd>Developed the portal and provided DevOps service</dd>
+                                </dl>
+                            </a>
+                            <a href="#">
+                                <dl>
+                                    <dt>
+                                        <div class="home-work-thumb"><img src="../images/home_work5.png" width="338" height="412" alt="" class="hover-eff" /></div>
+                                        Rosetta Stone
+                                    </dt>
+                                    <dd>1:1 English tutoring service for Korean market</dd>
+                                </dl>
+                            </a>
                         </div>
                     </div>
+                    <script>
+                        let isMoving = false;
+
+                        const swipe = (direction) => {
+                            const target = document.getElementById('home_work_list');
+                            const targetStyle = getComputedStyle(target);
+                            const targetX = Number(targetStyle.transform.match(/matrix.*\((.+)\)/)[1].split(', ')[4]);
+
+                            if (!isMoving && direction === 'prev' && targetX !== 0) {
+                                target.style.transform = `translateX(${targetX + 413}px)`;
+                                isMoving = true;
+                            } else if (!isMoving && direction === 'next' && targetX !== -826) {
+                                target.style.transform = `translateX(${targetX - 413}px)`;
+                                isMoving = true;
+                            }
+
+                            target.ontransitionend = () => {
+                                isMoving = false;
+                            };
+                        };
+                    </script>
                 </div>
                 <!-- //home-work -->
 
@@ -195,25 +226,37 @@
                     <p>Check out news of TecAce for a more convenient and smart life.</p>
                     <ul>
                         <li>
-                            <img src="../images/tmp-home-news1.png" alt="" width="371" height="212" />
-                            <article>
-                                <h4>TecAce opened a new branch office in Gangnam, Seoul,..</h4>
-                                <p>TecAce opened another office, TecAce gx, a third branch in Gangnam, Seoul, South Korea, on February 22, 2022.</p>
-                            </article>
+                            <a href="#">
+                                <div class="home-news-thumb">
+                                    <img src="../images/tmp-home-news1.png" alt="" width="370" height="212" class="hover-eff" />
+                                </div>
+                                <article>
+                                    <h4>TecAce opened a new branch office in Gangnam, Seoul,..</h4>
+                                    <p>TecAce opened another office, TecAce gx, a third branch in Gangnam, Seoul, South Korea, on February 22, 2022.</p>
+                                </article>
+                            </a>
                         </li>
                         <li>
-                            <img src="../images/tmp-home-news1.png" alt="" width="371" height="212" />
-                            <article>
-                                <h4>TecAce opened a new branch office in Gangnam, Seoul,..</h4>
-                                <p>TecAce opened another office, TecAce gx, a third branch in Gangnam, Seoul, South Korea, on February 22, 2022.</p>
-                            </article>
+                            <a href="#">
+                                <div class="home-news-thumb">
+                                    <img src="../images/tmp-home-news1.png" alt="" width="370" height="212" class="hover-eff" />
+                                </div>
+                                <article>
+                                    <h4>TecAce opened a new branch office in Gangnam, Seoul,..</h4>
+                                    <p>TecAce opened another office, TecAce gx, a third branch in Gangnam, Seoul, South Korea, on February 22, 2022.</p>
+                                </article>
+                            </a>
                         </li>
                         <li>
-                            <img src="../images/tmp-home-news1.png" alt="" width="371" height="212" />
-                            <article>
-                                <h4>TecAce opened a new branch office in Gangnam, Seoul,..</h4>
-                                <p>TecAce opened another office, TecAce gx, a third branch in Gangnam, Seoul, South Korea, on February 22, 2022.</p>
-                            </article>
+                            <a href="#">
+                                <div class="home-news-thumb">
+                                    <img src="../images/tmp-home-news1.png" alt="" width="370" height="212" class="hover-eff" />
+                                </div>
+                                <article>
+                                    <h4>TecAce opened a new branch office in Gangnam, Seoul,..</h4>
+                                    <p>TecAce opened another office, TecAce gx, a third branch in Gangnam, Seoul, South Korea, on February 22, 2022.</p>
+                                </article>
+                            </a>
                         </li>
                     </ul>
                 </div>

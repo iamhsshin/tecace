@@ -123,10 +123,10 @@
     }
 }
 .home-work {
-    overflow: hidden;
     position: relative;
     background-color: #212a50;
     &-inner {
+        overflow: hidden;
         position: relative;
         width: 1200px;
         height: 675px;
@@ -134,6 +134,9 @@
         margin: 0 auto;
         & > div {
             display: flex;
+            position: relative;
+            width: 1164px;
+            transform: translateX(0);
         }
     }
     .banner-swipe {
@@ -154,15 +157,17 @@
     }
     dl {
         position: relative;
-        width: 340px;
+        width: 338px;
         margin-right: 75px;
         color: #fff;
     }
     dt {
         margin-bottom: 12px;
         @include font-semi-bold;
-        img {
-            display: block;
+        .home-work-thumb {
+            overflow: hidden;
+            width: 338px;
+            height: 412px;
             margin-bottom: 12px;
         }
     }
@@ -247,12 +252,14 @@
         &:last-child {
             margin-right: 0;
         }
+        .home-news-thumb {
+            overflow: hidden;
+            width: 370px;
+            height: 212px;
+            margin-bottom: 32px;
+        }
         article {
             padding: 0 30px;
-        }
-        img {
-            display: block;
-            margin-bottom: 32px;
         }
         h4 {
             margin-bottom: 20px;
@@ -405,9 +412,8 @@
         }
     }
 }
-.banner-expertise {
+.banner-top {
     position: relative;
-    background: #212B4F url("../images/banner_expertise.png") 50% 50% no-repeat;
     & > div {
         display: flex;
         flex-direction: column;
@@ -423,10 +429,15 @@
         font-size: 48px;
     }
     p {
-        margin-bottom: 75px;
         @include font-light;
         text-align: center;
         line-height: 36px;
+    }
+    &.banner-expert {
+        background: #212B4F url("../images/banner_expertise.svg") 50% 50% no-repeat;
+    }
+    &.banner-work {
+        background: #212B4F url("../images/banner_works.svg") 50% 50% no-repeat;
     }
 }
 .expertise {
@@ -470,16 +481,17 @@
             margin-bottom: 0;
         }
         &:nth-child(1) {
-            background-image: url('../images/bg_service_device.png');
+            background-image: url('../images/bg_service_device.svg');
+            background-size: 880px 770px;
         }
         &:nth-child(2) {
-            background-image: url('../images/bg_service_cloud.png');
+            background-image: url('../images/bg_service_cloud.svg');
         }
         &:nth-child(3) {
-            background-image: url('../images/bg_service_software.png');
+            background-image: url('../images/bg_service_software.svg');
         }
         &:nth-child(4) {
-            background-image: url('../images/bg_service_meta.png');
+            background-image: url('../images/bg_service_meta.svg');
         }
     }
     dt {
@@ -492,4 +504,7 @@
         font-size: 22px;
         line-height: 33px;
     }
+}
+.banner-work {
+
 }
