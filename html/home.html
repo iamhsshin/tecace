@@ -9,13 +9,29 @@
     <body>
         <div id="wrap">
             <header id="main-header">
+                <div class="main-header-mask" id="main_header_mask"></div>
                 <h1>TecAce</h1>
                 <ul>
                     <li class="focus"><a href="#">Home</a></li>
                     <li><a href="#">Expertise</a></li>
                     <li><a href="#">Work</a></li>
-                    <li class="depth"><a href="#">About Us</a></li>
+                    <li class="depth">
+                        <a href="#">About Us</a>
+                        <ul>
+                            <li><a href="#">Who We Are</a></li>
+                            <li><a href="#">News</a></li>
+                            <li><a href="#">Careers</a></li>
+                        </ul>
+                    </li>
                 </ul>
+                <script>
+                    document.querySelector('.depth').addEventListener('mouseenter', () => {
+                        document.getElementById('main_header_mask').style.display = 'block';
+                    });
+                    document.querySelector('.depth').addEventListener('mouseleave', () => {
+                        document.getElementById('main_header_mask').style.display = 'none';
+                    });
+                </script>
             </header>
             <!-- //main-header -->
 
@@ -59,7 +75,7 @@
                 <!-- //home-partners -->
 
                 <div class="home-service">
-                    <div class="lazy">
+                    <div class="contents-header lazy">
                         <h3>
                             Solutions for Cross-device Experience <br />
                             And Cloud Service
@@ -200,31 +216,35 @@
                 </div>
                 <!-- //home-work -->
 
-                <div class="home-industries lazy">
-                    <h2>
+                <div class="home-solutions">
+                    <h2 class="lazy">
                         We Work Across <br />
                         Many Industries Find Yours!
                     </h2>
-                    <ul>
+                    <ul class="list-solutions lazy">
                         <li>retail tech</li>
                         <li>IOT</li>
                         <li>health</li>
                         <li>portal</li>
                         <li>education</li>
                     </ul>
-                    <h3>Software Solutions For Industry Leaders</h3>
-                    <p>
-                        Need a software solution that’s right for you? Choose a digital product crafted to answer the <br />
-                        challenges of your industry. Empower your business with a state-of-the-art digital solution, <br />
-                        tailored to your needs and expectations.
-                    </p>
+                    <div class="lazy">
+                        <h3>Software Solutions For Industry Leaders</h3>
+                        <p>
+                            Need a software solution that’s right for you? Choose a digital product crafted to answer the <br />
+                            challenges of your industry. Empower your business with a state-of-the-art digital solution, <br />
+                            tailored to your needs and expectations.
+                        </p>
+                    </div>
                 </div>
-                <!-- //home-industries -->
+                <!-- //home-solutions -->
 
-                <div class="home-news lazy">
-                    <h3>Latest News</h3>
-                    <p>Check out news of TecAce for a more convenient and smart life.</p>
-                    <ul>
+                <div class="home-news">
+                    <div class="contents-header lazy">
+                        <h3>Latest News</h3>
+                        <p>Check out news of TecAce for a more convenient and smart life.</p>
+                    </div>
+                    <ul class="lazy">
                         <li>
                             <a href="#">
                                 <div class="home-news-thumb">

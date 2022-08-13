@@ -9,13 +9,29 @@
     <body>
         <div id="wrap">
             <header id="main-header">
+                <div class="main-header-mask" id="main_header_mask"></div>
                 <h1>TecAce</h1>
                 <ul>
                     <li><a href="#">Home</a></li>
-                    <li class="focus"><a href="#">Expertise</a></li>
-                    <li><a href="#">Work</a></li>
-                    <li class="depth"><a href="#">About Us</a></li>
+                    <li><a href="#">Expertise</a></li>
+                    <li class="focus"><a href="#">Work</a></li>
+                    <li class="depth">
+                        <a href="#">About Us</a>
+                        <ul>
+                            <li><a href="#">Who We Are</a></li>
+                            <li><a href="#">News</a></li>
+                            <li><a href="#">Careers</a></li>
+                        </ul>
+                    </li>
                 </ul>
+                <script>
+                    document.querySelector('.depth').addEventListener('mouseenter', () => {
+                        document.getElementById('main_header_mask').style.display = 'block';
+                    });
+                    document.querySelector('.depth').addEventListener('mouseleave', () => {
+                        document.getElementById('main_header_mask').style.display = 'none';
+                    });
+                </script>
             </header>
             <!-- //main-header -->
 
@@ -31,7 +47,277 @@
                 </div>
                 <!-- //banner-expertise -->
 
+                <div class="work-solutions lazy">
+                    <div class="contents-header">
+                        <h3>Custom solutions for multiple industries</h3>
+                        <p>
+                            Choose a software development partner that knows the realities of your business. We foster <br />
+                            innovation across various industries, from Retail, IoT, Health, CRM portal, and education.
+                        </p>
+                    </div>
+                    <ul class="list-solutions">
+                        <li>retail tech</li>
+                        <li>IOT</li>
+                        <li>health</li>
+                        <li>portal</li>
+                        <li>education</li>
+                    </ul>
+                </div>
+                <!-- //work-solutions -->
 
+                <div class="detail-solutions bgc">
+                    <div class="detail-solutions-inner">
+                        <div class="lazy">
+                            <h4>Retail Tech</h4>
+                            <p>
+                                Backed by TecAce's Retail Solutions, you'll <br />
+                                delight your customers and maximize <br />
+                                omnichannel capabilities.
+                            </p>
+                            <ul>
+                                <li>Contents Globalization Service</li>
+                                <li>
+                                    Retail Specific solution - non internet <br />
+                                    environment- development
+                                </li>
+                                <li>Multi device Experience</li>
+                            </ul>
+                        </div>
+                        <div class="detail-solutions-detail lazy">
+                            <a href="#">
+                                <div class="detail-solutions-thumb"><img src="../images/thumb_solution_tech1.png" width="338" height="412" alt="" class="hover-eff" /></div>
+                                <dl>
+                                    <dt>Retail Store Analytics</dt>
+                                    <dd>
+                                        Analytics Dashboard Using Data From <br />
+                                        Combination Of AI Camera, And App Analytics
+                                    </dd>
+                                </dl>
+                            </a>
+                            <a href="#">
+                                <div class="detail-solutions-thumb"><img src="../images/thumb_solution_tech2.png" width="338" height="412" alt="" class="hover-eff" /></div>
+                                <dl>
+                                    <dt>Multi-device Experience</dt>
+                                    <dd>
+                                        Multi Device Experience Throughout Phone, <br />
+                                        Wearable, Tablet, PC, TV
+                                    </dd>
+                                </dl>
+                            </a>
+                            <a href="#">
+                                <div class="detail-solutions-thumb"><img src="../images/thumb_solution_tech3.png" width="338" height="412" alt="" class="hover-eff" /></div>
+                                <dl>
+                                    <dt>Retail Experience App</dt>
+                                    <dd>
+                                        Device Optimization, Content Globalization, <br />
+                                        Retail Environment
+                                    </dd>
+                                </dl>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- //detail-solutions -->
+
+                <div class="detail-solutions">
+                    <div class="detail-solutions-inner">
+                        <div class="lazy">
+                            <h4>Internet of Things</h4>
+                            <p>
+                                Utilizing our IoT, wearable and Custom app <br />
+                                development capability, we can help bring <br />
+                                your vision to life and create experiences that <br />
+                                exceed all expectations.
+                            </p>
+                            <ul>
+                                <li>
+                                    Service and Solution design leveraging IoT <br />
+                                    devices
+                                </li>
+                                <li>Firmware Development</li>
+                                <li>Device Connectivity & integration</li>
+                                <li>Real-time Operating Systems</li>
+                            </ul>
+                        </div>
+                        <div class="detail-solutions-detail lazy">
+                            <a href="#">
+                                <div class="detail-solutions-thumb"><img src="../images/thumb_solution_things1.png" width="338" height="412" alt="" class="hover-eff" /></div>
+                                <dl>
+                                    <dt>Ring for Watch</dt>
+                                    <dd>
+                                        Access Your Smart Video Doorbells And Security <br />
+                                        Cameras
+                                    </dd>
+                                </dl>
+                            </a>
+                            <a href="#">
+                                <div class="detail-solutions-thumb"><img src="../images/thumb_solution_things2.png" width="338" height="412" alt="" class="hover-eff" /></div>
+                                <dl>
+                                    <dt>Touch Table</dt>
+                                    <dd>
+                                        UI/UX And App Development Along With Device <br />
+                                        Optimation For 52" Display
+                                    </dd>
+                                </dl>
+                            </a>
+                            <a href="#">
+                                <div class="detail-solutions-thumb"><img src="../images/thumb_solution_things3.png" width="338" height="412" alt="" class="hover-eff" /></div>
+                                <dl>
+                                    <dt>Avengers Exhibition</dt>
+                                    <dd>
+                                        Location Based Content Delivery Utilizing <br />
+                                        Beacon And Dedicated Wearable
+                                    </dd>
+                                </dl>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- //detail-solutions -->
+
+                <div class="detail-solutions bgc">
+                    <div class="detail-solutions-inner">
+                        <div class="lazy">
+                            <h4>Health</h4>
+                            <p>
+                                Been thinking of how consumer device can <br />
+                                help health. We have created various health <br />
+                                related solutions using IoT such as wearable <br />
+                                devices.
+                            </p>
+                            <ul>
+                                <li>HIPAA Compliance</li>
+                                <li>
+                                    Hardware/Software integration for health <br />
+                                    related service
+                                </li>
+                                <li>
+                                    Application development for health related <br />
+                                    data gathering and analyzing
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="detail-solutions-detail lazy">
+                            <a href="#">
+                                <div class="detail-solutions-thumb"><img src="../images/thumb_solution_health1.png" width="338" height="412" alt="" class="hover-eff" /></div>
+                                <dl>
+                                    <dt>Virtual Travel</dt>
+                                    <dd>Wearable Gamified Health App</dd>
+                                </dl>
+                            </a>
+                            <a href="#">
+                                <div class="detail-solutions-thumb"><img src="../images/thumb_solution_health2.png" width="338" height="412" alt="" class="hover-eff" /></div>
+                                <dl>
+                                    <dt>CareAce</dt>
+                                    <dd>
+                                        Health Monitoring Service Utilizing Wearable <br />
+                                        Sensors
+                                    </dd>
+                                </dl>
+                            </a>
+                            <a href="#">
+                                <div class="detail-solutions-thumb"><img src="../images/thumb_solution_health3.png" width="338" height="412" alt="" class="hover-eff" /></div>
+                                <dl>
+                                    <dt>Strava</dt>
+                                    <dd>Health Activity App On Galaxy Watch</dd>
+                                </dl>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- //detail-solutions -->
+
+                <div class="detail-solutions">
+                    <div class="detail-solutions-inner">
+                        <div class="lazy">
+                            <h4>Customer Relationship Portal</h4>
+                            <p>
+                                Developing an amazing product is one of the <br />
+                                hardest challenges but strong partner and <br />
+                                customer relations is what will truly determine <br />
+                                the success of your business.
+                            </p>
+                            <ul>
+                                <li>TecAce CMS</li>
+                                <li>TecAce CRM</li>
+                                <li>Ticket System</li>
+                                <li>SSO</li>
+                            </ul>
+                        </div>
+                        <div class="detail-solutions-detail lazy">
+                            <a href="#">
+                                <div class="detail-solutions-thumb"><img src="../images/thumb_solution_portal1.png" width="338" height="412" alt="" class="hover-eff" /></div>
+                                <dl>
+                                    <dt>Developer Portal DevOps</dt>
+                                    <dd>
+                                        Developed The Portal And Provided DevOps <br />
+                                        Service
+                                    </dd>
+                                </dl>
+                            </a>
+                            <a href="#">
+                                <div class="detail-solutions-thumb"><img src="../images/thumb_solution_portal2.png" width="338" height="412" alt="" class="hover-eff" /></div>
+                                <dl>
+                                    <dt>ePOP Simulator</dt>
+                                    <dd>EPOP Simulator For Desktop</dd>
+                                </dl>
+                            </a>
+                            <a href="#">
+                                <div class="detail-solutions-thumb"><img src="../images/thumb_solution_portal3.png" width="338" height="412" alt="" class="hover-eff" /></div>
+                                <dl>
+                                    <dt>Resource Studio</dt>
+                                    <dd>Localization Tool For Different Countries</dd>
+                                </dl>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- //detail-solutions -->
+
+                <div class="detail-solutions bgc">
+                    <div class="detail-solutions-inner">
+                        <div class="lazy">
+                            <h4>Education</h4>
+                            <p>
+                                We offer educational strategies and solutions <br />
+                                that allow to cost-effectively use modern IT <br />
+                                to support educator, administrator and <br />
+                                students.
+                            </p>
+                            <ul>
+                                <li>
+                                    Design of visual effects for real-time <br />
+                                    feedback
+                                </li>
+                                <li>Kids friendly design for education app</li>
+                            </ul>
+                        </div>
+                        <div class="detail-solutions-detail lazy">
+                            <a href="#">
+                                <div class="detail-solutions-thumb"><img src="../images/thumb_solution_education1.png" width="338" height="412" alt="" class="hover-eff" /></div>
+                                <dl>
+                                    <dt>Rosetta Stone</dt>
+                                    <dd>1:1 English tutoring Service For Korean Market</dd>
+                                </dl>
+                            </a>
+                            <a href="#">
+                                <div class="detail-solutions-thumb"><img src="../images/thumb_solution_education2.png" width="338" height="412" alt="" class="hover-eff" /></div>
+                                <dl>
+                                    <dt>Chunjae Education</dt>
+                                    <dd>Education-Related EBooks For Students</dd>
+                                </dl>
+                            </a>
+                            <a href="#">
+                                <div class="detail-solutions-thumb"><img src="../images/thumb_solution_education3.png" width="338" height="412" alt="" class="hover-eff" /></div>
+                                <dl>
+                                    <dt>Neungyule Education</dt>
+                                    <dd>Virtual Vocabulary Trainer For Studying TOEIC</dd>
+                                </dl>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- //detail-solutions -->
 
                 <a href="#" class="position-top">top</a>
             </div>

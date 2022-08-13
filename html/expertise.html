@@ -9,13 +9,29 @@
     <body>
         <div id="wrap">
             <header id="main-header">
+                <div class="main-header-mask" id="main_header_mask"></div>
                 <h1>TecAce</h1>
                 <ul>
                     <li><a href="#">Home</a></li>
                     <li class="focus"><a href="#">Expertise</a></li>
                     <li><a href="#">Work</a></li>
-                    <li class="depth"><a href="#">About Us</a></li>
+                    <li class="depth">
+                        <a href="#">About Us</a>
+                        <ul>
+                            <li><a href="#">Who We Are</a></li>
+                            <li><a href="#">News</a></li>
+                            <li><a href="#">Careers</a></li>
+                        </ul>
+                    </li>
                 </ul>
+                <script>
+                    document.querySelector('.depth').addEventListener('mouseenter', () => {
+                        document.getElementById('main_header_mask').style.display = 'block';
+                    });
+                    document.querySelector('.depth').addEventListener('mouseleave', () => {
+                        document.getElementById('main_header_mask').style.display = 'none';
+                    });
+                </script>
             </header>
             <!-- //main-header -->
 
@@ -33,14 +49,16 @@
 
                 <div class="expertise">
                     <div class="expertise-preview lazy">
-                        <h2>
-                            A Facilitator For Big Movers In A Dynamic <br />
-                            And Fluctuating IT Industry
-                        </h2>
-                        <p>
-                            A proven track record of offering creative solutions including Cross-Device Apps, Cloud <br />
-                            Service, and Custom software development
-                        </p>
+                        <div class="contents-header">
+                            <h3>
+                                A Facilitator For Big Movers In A Dynamic <br />
+                                And Fluctuating IT Industry
+                            </h3>
+                            <p>
+                                A proven track record of offering creative solutions including Cross-Device Apps, Cloud <br />
+                                Service, and Custom software development
+                            </p>
+                        </div>
                         <div class="list-service">
                             <dl>
                                 <dt>
