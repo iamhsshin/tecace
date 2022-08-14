@@ -55,3 +55,20 @@ a:hover {
         transform: scale(1.1);
     }
 }
+.btn-default {
+    width: 168px;
+    height: 50px;
+    font-size: 1.6rem;
+    @include font-medium;
+    background-color: $color-text-highlight;
+    &:hover {
+        background-color: #3FA1D5;
+    }
+    &:active {
+        background-color: #347FAE;
+    }
+    &:disabled {
+        color: #949494;
+        background-color: #494949;
+    }
+}

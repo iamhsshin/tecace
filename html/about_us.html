@@ -26,10 +26,10 @@
                 </ul>
                 <script>
                     document.querySelector('.depth').addEventListener('mouseenter', () => {
-                        document.getElementById('main_header_mask').style.display = 'block';
+                        document.getElementById('main_header_mask').classList.add('active');
                     });
                     document.querySelector('.depth').addEventListener('mouseleave', () => {
-                        document.getElementById('main_header_mask').style.display = 'none';
+                        document.getElementById('main_header_mask').classList.remove('active');
                     });
                 </script>
             </header>
@@ -48,7 +48,7 @@
                         </p>
                     </div>
                 </div>
-                <!-- //banner-expertise -->
+                <!-- //banner-top -->
 
                 <div class="about-us lazy">
                     <div class="contents-header">

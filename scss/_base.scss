@@ -2,32 +2,31 @@
 
 @import 'config';
 
-@font-face{
+@font-face {
     font-family: Poppins-Light;
     src: url('../font/Poppins-Light.woff');
-    src: url('../font/Poppins-Light.woff') format('woff')
+    src: url('../font/Poppins-Light.woff') format('woff');
 }
-@font-face{
+@font-face {
     font-family: Poppins-Regular;
     src: url('../font/Poppins-Regular.woff');
-    src: url('../font/Poppins-Regular.woff') format('woff')
+    src: url('../font/Poppins-Regular.woff') format('woff');
 }
-@font-face{
+@font-face {
     font-family: Poppins-Medium;
     src: url('../font/Poppins-Medium.woff');
-    src: url('../font/Poppins-Medium.woff') format('woff')
+    src: url('../font/Poppins-Medium.woff') format('woff');
 }
-@font-face{
+@font-face {
     font-family: Poppins-SemiBold;
     src: url('../font/Poppins-SemiBold.woff');
-    src: url('../font/Poppins-SemiBold.woff') format('woff')
+    src: url('../font/Poppins-SemiBold.woff') format('woff');
 }
-@font-face{
+@font-face {
     font-family: Poppins-Bold;
     src: url('../font/Poppins-Bold.woff');
-    src: url('../font/Poppins-Bold.woff') format('woff')
+    src: url('../font/Poppins-Bold.woff') format('woff');
 }
-
 
 *,
 ::before,
@@ -95,11 +94,6 @@ button {
     cursor: pointer;
     background: 0;
 }
-textarea {
-    overflow: auto;
-    resize: none;
-    border: 0;
-}
 strong {
     font-weight: normal;
 }
@@ -111,12 +105,28 @@ input {
 input[type='text'],
 input[type='password'],
 input[type='number'],
-input[type='tel']{
-    position: relative;
+input[type='tel'],
+textarea {
     width: 100%;
-    font-size: 1rem;
-    @include font-regular;
-    color: inherit;
+    font-size: 1.4rem;
+    color: rgba(255, 255, 255, 0.7);
+    background-color: rgba(255, 255, 255, 0.1);
+    &::placeholder {
+        color: rgba(255, 255, 255, 0.7);
+    }
+}
+input[type='text'],
+input[type='password'],
+input[type='number'],
+input[type='tel'] {
+    height: 54px;
+    padding: 0 20px;
+}
+textarea {
+    overflow: auto;
+    resize: none;
+    border: 0;
+    padding: 20px;
 }
 h1,
 h2,
