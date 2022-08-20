@@ -986,7 +986,7 @@
             color: $color-text-highlight;
         }
     }
-    input[type=file] {
+    input[type='file'] {
         position: absolute;
         width: 0;
         height: 0;
@@ -1005,7 +1005,7 @@
         font-size: 1.4rem;
         @include font-bold;
     }
-    input[type=text] {
+    input[type='text'] {
         width: auto;
         height: auto;
         padding: 0;
