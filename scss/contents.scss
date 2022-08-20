@@ -3,7 +3,14 @@
 .banner-home {
     position: relative;
     color: #fff;
-    background: #010822 url('../images/banner-home.png') 50% 50% no-repeat;
+    background-color: #010822;
+    video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
     & > div {
         display: flex;
         flex-direction: column;
@@ -419,7 +426,14 @@
         background: #212b4f url('../images/banner_about.svg') 50% 50% no-repeat;
     }
     &.banner-career {
-        background: #212b4f url('../images/banner_career.png') 50% 50% no-repeat;
+        background-color: #23315D;
+        video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
     }
 }
 .expertise {
