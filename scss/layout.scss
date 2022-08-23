@@ -109,8 +109,8 @@ footer {
         color: #fff;
     }
     > dl {
-        margin-right: 85px;
-        &:last-child {
+        margin-right: 90px;
+        &:last-of-type {
             margin-right: 0;
         }
         dt {
@@ -160,9 +160,14 @@ footer {
     position: absolute;
     bottom: 80px;
     right: 50%;
-    width: 70px;
-    height: 83px;
-    margin-right: -650px;
-    @include ir;
-    background-image: url('../images/btn_top.png');
+    width: 44px;
+    padding-top: 40px;
+    margin-right: -590px;
+    text-align: center;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    background: url('../images/btn_top.svg') 50% 0 no-repeat;
+    &-home {
+        color: #fff;
+    }
 }
